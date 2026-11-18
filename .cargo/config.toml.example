@@ -1,0 +1,21 @@
+# Copy to .cargo/config.toml for local co-development against a sibling koren-idep/platform checkout.
+[patch."https://github.com/koren-idep/platform.git"]
+koren-core = { path = "../koren/crates/koren-core" }
+koren-protocol = { path = "../koren/crates/koren-protocol" }
+koren-commands = { path = "../koren/crates/koren-commands" }
+koren-extensions = { path = "../koren/crates/koren-extensions" }
+koren-lsp = { path = "../koren/crates/koren-lsp" }
+koren-inspections = { path = "../koren/crates/koren-inspections" }
+koren-lua = { path = "../koren/crates/koren-lua" }
+koren-workspace = { path = "../koren/crates/koren-workspace" }
+koren-search = { path = "../koren/crates/koren-search" }
+koren-git = { path = "../koren/crates/koren-git" }
+koren-terminal = { path = "../koren/crates/koren-terminal" }
+koren-debug = { path = "../koren/crates/koren-debug" }
+koren-documents = { path = "../koren/crates/koren-documents" }
+koren-projects = { path = "../koren/crates/koren-projects" }
+koren-tasks = { path = "../koren/crates/koren-tasks" }
+koren-cargo = { path = "../koren/crates/koren-cargo" }
+koren-run = { path = "../koren/crates/koren-run" }
+koren-tools = { path = "../koren/crates/koren-tools" }
+koren-ui = { path = "../koren/crates/koren-ui" }

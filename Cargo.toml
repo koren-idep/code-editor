@@ -1,0 +1,55 @@
+[workspace]
+resolver = "3"
+members = [
+    "apps/koren-code",
+    "apps/koren-native",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+repository = "https://github.com/koren-idep/code-editor"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+base64 = "=0.22.1"
+semver = "1"
+mlua = { version = "=0.11.6", features = ["lua54", "vendored", "send"] }
+glob = "0.3"
+crossbeam-channel = "0.5"
+ignore = "=0.4.22"
+regex = "1"
+git2 = { version = "=0.20.2", default-features = false }
+portable-pty = "=0.9.0"
+toml = "0.8"
+ropey = { version = "1.6.1", default-features = false, features = ["simd"] }
+koren-core = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-protocol = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-commands = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-extensions = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-lsp = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-inspections = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-lua = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-workspace = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-search = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-git = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-terminal = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-debug = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-documents = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-projects = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-tasks = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-cargo = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-run = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-tools = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+koren-ui = { git = "https://github.com/koren-idep/platform.git", branch = "main" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }

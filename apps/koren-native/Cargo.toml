@@ -1,0 +1,37 @@
+[package]
+name = "koren-native"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Native Rust desktop IDE application built on koren-ui and Koren IDE Platform"
+
+[[bin]]
+name = "koren-native"
+path = "src/main.rs"
+
+[dependencies]
+koren-ui = { workspace = true }
+koren-core = { workspace = true }
+koren-protocol = { workspace = true }
+koren-workspace = { workspace = true }
+koren-documents = { workspace = true }
+koren-projects = { workspace = true }
+koren-commands = { workspace = true }
+koren-search = { workspace = true }
+koren-git = { workspace = true }
+koren-cargo = { workspace = true }
+koren-run = { workspace = true }
+koren-tools = { workspace = true }
+koren-tasks = { workspace = true }
+koren-extensions = { workspace = true }
+koren-inspections = { workspace = true }
+koren-lsp = { workspace = true }
+koren-terminal = { workspace = true }
+koren-debug = { workspace = true }
+ropey.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+[lints]
+workspace = true
